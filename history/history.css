@@ -1,0 +1,190 @@
+/* =============================================
+   СТИЛИ СТРАНИЦЫ «КИЕВСКАЯ РУСЬ»
+   ============================================= */
+
+main {
+    flex: 1;
+    padding: 2vw 4vw;
+    background-color: #1a1a1a;
+    overflow-x: auto;
+    background-image: url();
+}
+
+h1 {
+    text-align: center;
+    color: #c0c0c0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    font-size: 3vw;
+    margin-top: 2vh;
+    margin-bottom: 6vh;
+    cursor: default;
+}
+
+/* Контейнер шкалы */
+.timeline {
+    position: relative;
+    width: 100%;
+    min-width: 800px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+/* Трек (основная линия) */
+.timeline-track {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4a4a4a;
+    border-radius: 2px;
+}
+
+/* Сегменты линии для подсветки */
+.segment {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.segment.active {
+    background-color: #e3db00;
+}
+
+/* Метки-годы — теперь сидят на линии */
+.timeline-markers {
+    position: absolute;
+    top: 20px;          /* ровно на линии */
+    left: 0;
+    width: 100%;
+}
+
+.marker {
+    position: absolute;
+    transform: translateX(-50%);
+    color: #aaaaaa;
+    font-weight: bold;
+    font-size: 1.2vw;
+    white-space: nowrap;
+    cursor: default;
+    transition: color 0.3s ease;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Вертикальная чёрточка — теперь над цифрой, соединяет линию и подпись */
+.marker::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 10px;
+    background-color: #aaaaaa;
+    margin-bottom: 2px;
+    transition: background-color 0.3s ease;
+}
+
+/* Жёлтый цвет при наведении на год */
+.marker:hover {
+    color: #e3db00;
+}
+
+.marker:hover::after {
+    background-color: #e3db00;
+}
+
+/* Контейнер для блоков с именами */
+.timeline-links {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+}
+
+/* Стиль блока-ссылки */
+.interval {
+    position: absolute;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid transparent;
+    border-radius: 0.5vw;
+    padding: 0.6vh 0.5vw;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    cursor: pointer;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.interval:hover {
+    background-color: rgba(227, 219, 0, 0.15);
+    border-color: #e3db00;
+    transform: translateX(-50%) translateY(-2px);
+}
+
+.ruler-name {
+    font-size: 1vw;
+    font-weight: 600;
+    line-height: 1.3;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    pointer-events: none;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 5vw;
+    }
+    .marker {
+        font-size: 2.2vw;
+    }
+    .ruler-name {
+        font-size: 1.8vw;
+    }
+    .interval {
+        height: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .timeline {
+        min-width: 700px;
+    }
+    h1 {
+        font-size: 6vw;
+    }
+    .marker {
+        font-size: 3.5vw;
+    }
+    .ruler-name {
+        font-size: 2.8vw;
+    }
+    .interval {
+        height: 55px;
+    }
+}
