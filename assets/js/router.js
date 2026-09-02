@@ -7,53 +7,54 @@ const sections = {
   persons:   { title: 'Личности',           template: 'pages/persons.html' },
   maps:      { title: 'Карты',              template: 'pages/maps.html' },
   weapons:   { title: 'Вооружение',         template: 'pages/weapons.html' },
-  // Подразделы
   rurik:     { title: 'Рюрик',              template: 'pages/rulers/rurik.html', parent: 'history' },
   oleg:      { title: 'Олег Вещий',         template: 'pages/rulers/oleg.html', parent: 'history' },
-  // ... и так далее
 };
 
-// Загрузка контента
 async function loadSection(name) {
   const section = sections[name];
   if (!section) return;
-  
-  // Обновить заголовок
+
   document.title = section.title + ' — Киевская Русь';
   document.getElementById('page-title').textContent = section.title;
-  
-  // Подсветить пункт меню
+
   document.querySelectorAll('.nav-list a').forEach(a => {
     a.classList.toggle('active', a.dataset.section === (section.parent || name));
   });
-  
-  // Загрузить контент
+
   const response = await fetch(section.template);
   const html = await response.text();
   document.getElementById('content').innerHTML = html;
-  
-  // Инициализировать компоненты на новой странице
-  initGallery();
-  initLightbox();
+
+  initGallery?.();
+  initLightbox?.();
   initTimeline?.();
-  
-  // Обновить URL (без перезагрузки)
+
   history.pushState({ section: name }, '', `#${name}`);
 }
 
-// Обработка кликов по навигации
-document.querySelectorAll('[data-section]').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    loadSection(link.dataset.section);
-  });
+// Делегирование кликов на документ
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('[data-section]');
+  if (!link) return;
+  e.preventDefault();
+  const sectionName = link.dataset.section;
+  if (sections[sectionName]) {
+    loadSection(sectionName);
+  }
 });
 
-// Обработка кнопок назад/вперёд
-window.addEventListener('popstate', (e) => {
-  if (e.state?.section) loadSection(e.state.section);
+// Обработка изменения hash (например, при ручном вводе #rurik)
+window.addEventListener('hashchange', () => {
+  const name = location.hash.slice(1);
+  if (sections[name]) loadSection(name);
 });
 
 // Загрузка начальной секции
-const initial = location.hash.slice(1) || 'history';
-loadSection(initial);
+const initial = location.hash.slice(1) || 'history'; // если хотите стартовать с history, иначе 'home'
+if (sections[initial]) {
+  loadSection(initial);
+} else {
+  // fallback на history или home
+  loadSection('history');
+}
