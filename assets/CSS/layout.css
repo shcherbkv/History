@@ -76,10 +76,10 @@ body {
 
 /* Подвал */
 .site-footer {
-  --footer-logo-height: 90px;
-  --footer-icon-size: 65px;
-  --footer-icon-size-tablet: 79px;
-  --footer-icon-size-mobile: 104px;
+  --footer-logo-height: 39px;          
+  --footer-icon-size: 28px;           
+  --footer-icon-size-tablet: 39px;     
+  --footer-icon-size-mobile: 45px;     
 
   display: grid;
   grid-template-columns: auto 1fr auto;
