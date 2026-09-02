@@ -41,7 +41,7 @@ body {
 }
 
 .menu-toggle {
-  display: none;               /* скрыт на десктопе */
+  display: none;
   font-size: 2rem;
   color: var(--heading-color);
 }
@@ -154,6 +154,26 @@ body {
 .footer-phone {
   font-size: 1.1vw;
   white-space: nowrap;
+}
+
+/* =============================================
+   ГАРАНТИРОВАННОЕ УМЕНЬШЕНИЕ ИКОНОК ПОДВАЛА
+   ============================================= */
+.site-footer .footer-icon {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  object-fit: contain !important;
+  display: inline-block !important;
+}
+
+.site-footer .footer-logo-link img {
+  height: 28px !important;
+  max-height: 28px !important;
+  width: auto !important;
 }
 
 /* Адаптивность навигации и подвала */
