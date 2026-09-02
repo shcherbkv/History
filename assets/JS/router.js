@@ -55,5 +55,5 @@ window.addEventListener('popstate', (e) => {
 });
 
 // Загрузка начальной секции
-const initial = location.hash.slice(1) || 'home';
+const initial = location.hash.slice(1) || 'history';
 loadSection(initial);
