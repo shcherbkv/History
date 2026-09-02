@@ -96,6 +96,12 @@
   max-width: 900px;
   margin: 0 auto;
 }
+
+.article-content .timeline {
+  max-width: none;
+  margin: 0;
+}
+
 .article-content h1 {
   text-align: center;
   color: var(--heading-color);
@@ -248,7 +254,7 @@
   transform: translateX(-50%);
   color: #aaaaaa;
   font-weight: bold;
-  font-size: 1.2vw;
+  font-size: 1vw;
   white-space: nowrap;
   display: flex;
   flex-direction: column;
@@ -298,7 +304,7 @@
   transform: translateX(-50%) translateY(-2px);
 }
 .ruler-name {
-  font-size: 1vw;
+  font-size: 0.9vw;
   font-weight: 600;
   line-height: 1.3;
 }
