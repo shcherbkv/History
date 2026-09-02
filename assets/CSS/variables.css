@@ -1,1 +1,44 @@
-1
+/* =============================================
+   CSS-ПЕРЕМЕННЫЕ ДЛЯ ТЕМ И КОМПОНЕНТОВ
+   ============================================= */
+:root {
+  /* Тёмная тема (по умолчанию) */
+  --bg-main: #1a1a1a;
+  --text-color: #e0e0e0;
+  --heading-color: #e3db00;          /* жёлтый акцент */
+  --heading-secondary: #f0e4d0;      /* пергаментный */
+  --border-color: #333;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: #333;
+  --card-hover-bg: rgba(227, 219, 0, 0.1);
+  --card-hover-border: #e3db00;
+  --quote-bg: rgba(227, 219, 0, 0.05);
+  --quote-border: #e3db00;
+  --image-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --image-border: #333;
+  --header-bg: #2b2b2b;
+  --footer-bg: #2b2b2b;
+  --footer-text: #bdbdbd;
+  --link-hover: #c7be00;
+  --transition-speed: 0.3s;
+}
+
+body.light-theme {
+  --bg-main: #f5f5f5;
+  --text-color: #222;
+  --heading-color: #b8860b;          /* тёмно-золотой */
+  --heading-secondary: #3b2f2f;
+  --border-color: #ccc;
+  --card-bg: #ffffff;
+  --card-border: #ccc;
+  --card-hover-bg: rgba(184, 134, 11, 0.1);
+  --card-hover-border: #b8860b;
+  --quote-bg: rgba(184, 134, 11, 0.08);
+  --quote-border: #b8860b;
+  --image-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --image-border: #ccc;
+  --header-bg: #e0e0e0;
+  --footer-bg: #e0e0e0;
+  --footer-text: #333;
+  --link-hover: #8a6d1f;
+}
