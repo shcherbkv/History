@@ -9,6 +9,11 @@ const sections = {
   weapons:   { title: 'Вооружение',         template: 'pages/weapons.html' },
   rurik:     { title: 'Рюрик',              template: 'pages/rulers/rurik.html', parent: 'history' },
   oleg:      { title: 'Олег Вещий',         template: 'pages/rulers/oleg.html', parent: 'history' },
+  igor:      { title: 'Игорь Рюрикович',    template: 'pages/rulers/igor.html', parent: 'history' },
+  olga:      { title: 'Княгиня Ольга',      template: 'pages/rulers/olga.html', parent: 'history' },
+  svyatoslav:{ title: 'Святослав Игоревич', template: 'pages/rulers/svyatoslav.html', parent: 'history' },
+  yaropolk:  { title: 'Ярополк Святославич', template: 'pages/rulers/yaropolk.html', parent: 'history' },
+  vladimir:  { title: 'Владимир Святославич', template: 'pages/rulers/vladimir.html', parent: 'history' },
 };
 
 async function loadSection(name) {
