@@ -65,6 +65,13 @@ body {
   background-color: var(--card-hover-bg);
 }
 
+/* Активный пункт меню */
+.nav-list a.active {
+  color: var(--heading-color);
+  background-color: var(--card-hover-bg);
+  border-radius: 0.5vw;
+}
+
 /* Основной контент */
 #content {
   flex: 1;
