@@ -1,1 +1,121 @@
+/* =============================================
+   ОБЩАЯ СТРУКТУРА: ШАПКА, ПОДВАЛ, КОНТЕЙНЕРЫ
+   ============================================= */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-color);
+}
 
+/* Шапка */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-bg);
+  padding: 0 3vw;
+  height: 10vh;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.logo img {
+  height: 6.66vh;
+  width: auto;
+  transition: transform 0.2s;
+}
+.logo:hover img {
+  transform: scale(1.05);
+}
+
+/* Навигация */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;               /* скрыт на десктопе */
+  font-size: 2rem;
+  color: var(--heading-color);
+}
+
+.nav-list {
+  display: flex;
+  gap: 2vw;
+}
+
+.nav-list a {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1.1vw;
+  padding: 0.5vw 1vw;
+  border-radius: 0.5vw;
+  transition: color 0.2s, background-color 0.2s;
+}
+.nav-list a:hover {
+  color: var(--heading-color);
+  background-color: var(--card-hover-bg);
+}
+
+/* Основной контент */
+#content {
+  flex: 1;
+  padding: 2vw 4vw;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Подвал */
+.site-footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 2vh 3vw;
+  font-size: 1.2vw;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Адаптивность навигации */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--header-bg);
+    padding: 2vw;
+    gap: 1.5vh;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+  }
+
+  .nav-list.open {
+    display: flex;
+  }
+
+  .nav-list a {
+    font-size: 4vw;
+    padding: 2vw;
+  }
+
+  #content {
+    padding: 3vw;
+  }
+
+  .site-footer {
+    font-size: 3.5vw;
+  }
+}
