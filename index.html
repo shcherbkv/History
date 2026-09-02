@@ -1,98 +1,48 @@
-﻿<!DOCTYPE html>
+<!-- index.html — единственная «оболочка» -->
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Киевская Русь</title>
-    <link rel="icon" href="pic/logo-icon.png" type="image/png">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="kr.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Киевская Русь</title>
+  
+  <!-- Общие стили -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
 </head>
 <body>
+  <!-- Навигация — одна на весь сайт -->
+  <header class="site-header">
+    <a href="#home" class="logo">
+      <img src="assets/images/ui/logo.png" alt="Киевская Русь">
+    </a>
+    <nav class="main-nav">
+      <button class="menu-toggle" aria-label="Меню">☰</button>
+      <ul class="nav-list">
+        <li><a href="#history" data-section="history">История</a></li>
+        <li><a href="#culture" data-section="culture">Культура</a></li>
+        <li><a href="#persons" data-section="persons">Личности</a></li>
+        <li><a href="#maps" data-section="maps">Карты</a></li>
+        <li><a href="#weapons" data-section="weapons">Вооружение</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!-- --------------------------------------------------------------------------------------- -->
+  <!-- Контент подгружается сюда -->
+  <main id="content">
+    <!-- Здесь будет рендериться контент -->
+  </main>
 
-    <header>
-        <div class="logo-div-header" onclick="goBack()">
-            <a href="index.html">
-                <img class="logo-img-header" src="pic/logo.png" alt="logo">
-            </a>
-        </div>
+  <footer class="site-footer">
+    <p>© 2024 История Киевской Руси</p>
+  </footer>
 
-        <button class="back-btn" onclick="goBack()" aria-label="Назад">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 19L8 12L15 5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
-    </header>
-
-<!-- --------------------------------------------------------------------------------------- -->
-
-    <main>
-
-        <h1>Киевская Русь</h1>
-
-        <div class="kr-grid">
-
-            <div class="history-div kr-block" onclick="goHistoryPage()">
-                <div class="kr-desc">История Киевской Руси</div>
-            </div>
-
-            <div class="culture-div kr-block" onclick="goCulturePage()">
-                <div class="kr-desc">Культура в период Киевской Руси</div>
-            </div>
-
-            <div class="persons-div kr-block" onclick="goPersonsPage()">
-                <div class="kr-desc">Личности эпохи Киевской Руси</div>
-            </div>
-
-            <div class="maps-div kr-block" onclick="goMapsPage()">
-                <div class="kr-desc">Карты эпохи Киевской Руси</div>
-            </div>
-
-            <div class="weapons-div kr-block" onclick="goWeaponsPage()">
-                <div class="kr-desc">Вооружение в эпоху Киевской Руси</div>
-            </div>
-
-            <div class="posts-div kr-block" onclick="goEmptyPage()">
-                <div class="kr-desc">Прочие рассуждения на тему Киевской Руси</div>
-            </div>
-
-        </div>
-
-    </main>
-
-<!-- --------------------------------------------------------------------------------------- -->
-
-    <footer>
-
-        <div class="logo-div-footer">
-            <span class="logo-link">
-                <img class="logo-img-footer" src="pic/logo.png" alt="История Государства Российского — логотип">
-            </span>
-        </div>
-
-        <div class="copyright-div">
-            <span>© 2026 История Государства Российского. Все права защищены.</span>
-        </div>
-
-        <div class="icons-footer">
-            <a href="https://vk.com/id355638419" target="_blank" rel="noopener noreferrer" aria-label="Мы ВКонтакте">
-                <img class="vk-img-footer" src="pic/vk.png" alt="ВКонтакте">
-            </a>
-
-            <a href="https://e.mail.ru/compose/?to=sh3rbakov.mak@mail.ru&subject=Предложение%20по%20улучшению%20сайта" target="_blank" aria-label="Написать письмо">
-                <img class="mail-img-footer" src="pic/mail.png" alt="Email">
-            </a>
-
-            <div class="footer-number">
-                <a href="tel:+79688503820" aria-label="Позвонить нам">+7 (968) 850-38-20</a>
-            </div>
-        </div>
-
-    </footer>
-
-<!-- --------------------------------------------------------------------------------------- -->
-    <script src="kr.js"></script>
+  <!-- Общие скрипты -->
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/router.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/lightbox.js"></script>
 </body>
 </html>
