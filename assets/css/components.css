@@ -840,3 +840,16 @@ body.light-theme .ruler-name {
   .culture-card .card-content p { font-size: 4vw; }
   .culture-card .card-image { height: 220px; }
 }
+
+/* Исправление пляшущих цифр */
+.marker,
+.card-title,
+.version,
+.date,
+.footer-phone,
+.ruler-name,
+.years,
+.article-content h1,
+.page-content h1 {
+  font-family: var(--font-digits);
+}
