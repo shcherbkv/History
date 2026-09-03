@@ -17,6 +17,16 @@ const sections = {
   religiya:    { title: 'Религия',     template: 'pages/culture/religiya.html', parent: 'culture' },
   architecture:{ title: 'Архитектура', template: 'pages/culture/architecture.html', parent: 'culture' },
   crafts:      { title: 'Ремёсла',     template: 'pages/culture/crafts.html', parent: 'culture' },
+  map1:        { title: 'Расселение восточных славян и их соседей (VIII–IX вв.)', template: 'pages/maps/map1.html', parent: 'maps' },
+  map2:        { title: 'Образование Древнерусского государства (конец IX – X вв.)', template: 'pages/maps/map2.html', parent: 'maps' },
+  map3:        { title: 'Торговые пути Восточной Европы: «из варяг в греки» и Волжский путь', template: 'pages/maps/map3.html', parent: 'maps' },
+  map4:        { title: 'Походы князей Олега, Игоря и Святослава (IX–X вв.)', template: 'pages/maps/map4.html', parent: 'maps' },
+  map5:        { title: 'Разгром Хазарского каганата (965–969)', template: 'pages/maps/map5.html', parent: 'maps' },
+  map6:        { title: 'Дунайские походы Святослава (967–971) и война с Византией', template: 'pages/maps/map6.html', parent: 'maps' },
+  map7:        { title: 'Древнерусское государство при Владимире Святославиче (980–1015)', template: 'pages/maps/map7.html', parent: 'maps' },
+  map8:        { title: 'Крещение Руси и распространение христианства (988–1015)', template: 'pages/maps/map8.html', parent: 'maps' },
+  map9:        { title: 'Соседи Древней Руси: Византия, Волжская Булгария, Польша, Венгрия, печенеги', template: 'pages/maps/map9.html', parent: 'maps' },
+  map10:       { title: 'Административно-территориальное деление в конце правления Владимира', template: 'pages/maps/map10.html', parent: 'maps' },
 };
 
 async function loadSection(name) {
