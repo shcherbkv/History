@@ -258,3 +258,21 @@ body {
 .back-button:hover svg {
   stroke: var(--link-hover);
 }
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.2vw;
+}
+
+.back-button svg {
+  width: 32px;
+  height: 32px;
+  color: var(--heading-color);
+  transition: color 0.2s, transform 0.2s;
+}
+
+.back-button:hover svg {
+  color: var(--link-hover);
+  transform: scale(1.1);
+}
