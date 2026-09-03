@@ -74,7 +74,7 @@ window.addEventListener('hashchange', () => {
 });
 
 // Загрузка начальной секции
-const initial = location.hash.slice(1) || 'history'; // если хотите стартовать с history, иначе 'home'
+const initial = location.hash.slice(1) || 'home'; 
 if (sections[initial]) {
   loadSection(initial);
 } else {
