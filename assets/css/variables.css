@@ -42,3 +42,7 @@ body.light-theme {
   --footer-text: #333;
   --link-hover: #8a6d1f;
 }
+
+:root {
+  --font-digits: 'Segoe UI', 'Arial', 'Helvetica', sans-serif;
+}
