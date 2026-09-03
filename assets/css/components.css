@@ -496,7 +496,6 @@
 
 /* Блок изменений */
 .changelog {
-  max-width: 100%;
   margin: 0 auto 4vh;
 }
 
@@ -551,7 +550,6 @@
 /* Карусель */
 .carousel {
   position: relative;
-  max-width: 100%;
   margin: 0 auto 4vh;
   overflow: hidden;
   border-radius: 12px;
