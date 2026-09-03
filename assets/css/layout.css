@@ -240,3 +240,21 @@ body {
     font-size: 4vw;
   }
 }
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.back-button svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--heading-color);
+  stroke-width: 3;
+  transition: stroke 0.2s;
+}
+
+.back-button:hover svg {
+  stroke: var(--link-hover);
+}
