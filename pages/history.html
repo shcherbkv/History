@@ -1,45 +1,71 @@
-<article class="article-content">
+<div class="history-page">
   <h1>Киевская Русь</h1>
-  <p class="intro-text">
-    Выберите правителя, чтобы узнать подробнее о его эпохе.
-  </p>
+  <p class="intro-text">Выберите правителя, чтобы узнать подробнее о его эпохе.</p>
 
   <div class="timeline">
+    <!-- Линия -->
     <div class="timeline-line"></div>
 
-    <div class="timeline-markers">
-      <span class="marker" style="left: 0%;">862</span>
-      <span class="marker" style="left: 12.5%;">879</span>
-      <span class="marker" style="left: 25%;">912</span>
-      <span class="marker" style="left: 37.5%;">945</span>
-      <span class="marker" style="left: 50%;">967</span>
-      <span class="marker" style="left: 62.5%;">972</span>
-      <span class="marker" style="left: 75%;">980</span>
-      <span class="marker" style="left: 100%;">1015</span>
+    <!-- Сегменты линии (прозрачные, подсвечиваются при наведении) -->
+    <div class="timeline-segments">
+      <div class="segment" data-segment="rurik" style="left: 0%; width: 12.5%;"></div>
+      <div class="segment" data-segment="oleg" style="left: 12.5%; width: 12.5%;"></div>
+      <div class="segment" data-segment="igor" style="left: 25%; width: 12.5%;"></div>
+      <div class="segment" data-segment="olga" style="left: 37.5%; width: 12.5%;"></div>
+      <div class="segment" data-segment="svyatoslav" style="left: 50%; width: 12.5%;"></div>
+      <div class="segment" data-segment="yaropolk" style="left: 62.5%; width: 12.5%;"></div>
+      <div class="segment" data-segment="vladimir" style="left: 75%; width: 25%;"></div>
     </div>
 
+    <!-- Маркеры дат -->
+    <div class="timeline-markers">
+      <span class="marker" id="marker-862" style="left: 0%;">862</span>
+      <span class="marker" id="marker-879" style="left: 12.5%;">879</span>
+      <span class="marker" id="marker-912" style="left: 25%;">912</span>
+      <span class="marker" id="marker-945" style="left: 37.5%;">945</span>
+      <span class="marker" id="marker-967" style="left: 50%;">967</span>
+      <span class="marker" id="marker-972" style="left: 62.5%;">972</span>
+      <span class="marker" id="marker-980" style="left: 75%;">980</span>
+      <span class="marker" id="marker-1015" style="left: 100%;">1015</span>
+    </div>
+
+    <!-- Интервалы с именами -->
     <div class="timeline-links">
-      <a href="#rurik" data-section="rurik" class="interval" style="left: 6.25%; width: 9.375%;">
+      <a href="#rurik" data-section="rurik" class="interval" 
+         data-segment="rurik" data-start-marker="marker-862" data-end-marker="marker-879"
+         style="left: 6.25%; width: 9.375%;">
         <span class="ruler-name">Рюрик</span>
       </a>
-      <a href="#oleg" data-section="oleg" class="interval" style="left: 18.75%; width: 9.375%;">
+      <a href="#oleg" data-section="oleg" class="interval" 
+         data-segment="oleg" data-start-marker="marker-879" data-end-marker="marker-912"
+         style="left: 18.75%; width: 9.375%;">
         <span class="ruler-name">Олег Вещий</span>
       </a>
-      <a href="#igor" data-section="igor" class="interval" style="left: 31.25%; width: 9.375%;">
+      <a href="#igor" data-section="igor" class="interval" 
+         data-segment="igor" data-start-marker="marker-912" data-end-marker="marker-945"
+         style="left: 31.25%; width: 9.375%;">
         <span class="ruler-name">Игорь</span>
       </a>
-      <a href="#olga" data-section="olga" class="interval" style="left: 43.75%; width: 9.375%;">
+      <a href="#olga" data-section="olga" class="interval" 
+         data-segment="olga" data-start-marker="marker-945" data-end-marker="marker-967"
+         style="left: 43.75%; width: 9.375%;">
         <span class="ruler-name">Ольга</span>
       </a>
-      <a href="#svyatoslav" data-section="svyatoslav" class="interval" style="left: 56.25%; width: 9.375%;">
+      <a href="#svyatoslav" data-section="svyatoslav" class="interval" 
+         data-segment="svyatoslav" data-start-marker="marker-967" data-end-marker="marker-972"
+         style="left: 56.25%; width: 9.375%;">
         <span class="ruler-name">Святослав</span>
       </a>
-      <a href="#yaropolk" data-section="yaropolk" class="interval" style="left: 68.75%; width: 9.375%;">
+      <a href="#yaropolk" data-section="yaropolk" class="interval" 
+         data-segment="yaropolk" data-start-marker="marker-972" data-end-marker="marker-980"
+         style="left: 68.75%; width: 9.375%;">
         <span class="ruler-name">Ярополк</span>
       </a>
-      <a href="#vladimir" data-section="vladimir" class="interval" style="left: 87.5%; width: 18.75%;">
+      <a href="#vladimir" data-section="vladimir" class="interval" 
+         data-segment="vladimir" data-start-marker="marker-980" data-end-marker="marker-1015"
+         style="left: 87.5%; width: 18.75%;">
         <span class="ruler-name">Владимир</span>
       </a>
     </div>
   </div>
-</article>
+</div>

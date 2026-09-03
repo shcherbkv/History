@@ -35,3 +35,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Простая карусель
+function initCarousel() {
+  const carousel = document.querySelector('.carousel');
+  if (!carousel) return;
+  const track = carousel.querySelector('.carousel-track');
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const prevBtn = carousel.querySelector('.prev');
+  const nextBtn = carousel.querySelector('.next');
+  let index = 0;
+
+  const update = () => {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  };
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    update();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  });
+
+  // Автопрокрутка (опционально)
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    update();
+  }, 5000);
+}
+
+// Вызвать после загрузки контента
+document.addEventListener('DOMContentLoaded', initCarousel);

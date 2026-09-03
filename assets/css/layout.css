@@ -84,7 +84,7 @@ body {
 /* Подвал */
 .site-footer {
   /* Размеры после увеличения на 40% от маленьких значений */
-  --footer-logo-height: 39px;          /* было 28px */
+  --footer-logo-height: 31px;          /* было 28px */
   --footer-icon-size: 28px;            /* было 20px */
   --footer-icon-size-tablet: 39px;     /* было 28px */
   --footer-icon-size-mobile: 45px;     /* было 32px */
@@ -163,6 +163,8 @@ body {
 .footer-phone {
   font-size: 1.1vw;
   white-space: nowrap;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  color: red;
 }
 
 /* Адаптивность навигации и подвала */
@@ -199,7 +201,7 @@ body {
   }
 
   .site-footer {
-    --footer-logo-height: 45px;       /* увеличен для планшетов */
+    --footer-logo-height: 36px;       /* увеличен для планшетов */
     --footer-icon-size: var(--footer-icon-size-tablet);
     height: auto;
     min-height: 6vh;
@@ -228,7 +230,7 @@ body {
 
 @media (max-width: 600px) {
   .site-footer {
-    --footer-logo-height: 50px;       /* увеличен для мобильных */
+    --footer-logo-height: 40px;       /* увеличен для мобильных */
     --footer-icon-size: var(--footer-icon-size-mobile);
     padding: 2vh 3vw;
   }

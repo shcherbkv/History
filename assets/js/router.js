@@ -35,6 +35,11 @@ async function loadSection(name) {
   initLightbox?.();
   initTimeline?.();
 
+  // Добавьте сюда
+  if (name === 'home') {
+    initCarousel();
+  }
+
   history.pushState({ section: name }, '', `#${name}`);
 }
 
