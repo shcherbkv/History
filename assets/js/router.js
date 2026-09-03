@@ -68,3 +68,11 @@ if (sections[initial]) {
   // fallback на history или home
   loadSection('history');
 }
+
+// Кнопка "Назад": подъём по иерархии разделов
+document.getElementById('back-button')?.addEventListener('click', () => {
+  const currentHash = location.hash.slice(1) || 'home';
+  const currentSection = sections[currentHash];
+  const parentHash = currentSection?.parent || 'home';
+  loadSection(parentHash);
+});
