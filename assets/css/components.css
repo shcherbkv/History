@@ -406,21 +406,12 @@
   padding: 0;
 }
 
-/* Уберите ограничение у #content, если оно мешает */
 #content {
   flex: 1;
   padding: 2vw 4vw;
   width: 100%;
   max-width: none;      /* ← раньше было 1400px */
   margin: 0;
-}
-
-/* Страницы с полной шириной (например, правители) */
-.page-content {
-  width: 85%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
 }
 
 .page-content h1 {
