@@ -415,6 +415,49 @@
   margin: 0;
 }
 
+/* Страницы с полной шириной (например, правители) */
+.page-content {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.page-content h1 {
+  text-align: center;
+  color: var(--heading-color);
+  font-size: 3vw;
+  margin-bottom: 4vh;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-content h3 {
+  color: var(--heading-secondary);
+  border-bottom: 3px solid var(--heading-color);
+  padding-bottom: 0.4em;
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+  letter-spacing: 0.5px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.page-content p {
+  margin-bottom: 2.5vh;
+  text-indent: 4vw;
+  font-size: 1.2vw;
+  line-height: 1.7;
+}
+
+.page-content .text-block {
+  font-size: 1.2vw;
+  line-height: 1.7;
+}
+
+/* Остальные компоненты (картинки, цитаты, списки) уже описаны в components.css и будут работать, так как используют свои классы */
+
 /* Лайтбокс (модальное окно для изображений) */
 .lightbox {
   position: fixed;
