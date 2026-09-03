@@ -748,7 +748,7 @@ body.light-theme .ruler-name {
 
 @media (max-width: 600px) {
   .carousel-slide img {
-    height: 300px;   /* на телефонах уменьшаем обратно */
+    height: 225px;   /* на телефонах уменьшаем обратно */
   }
   .changelog {
     max-width: 100%;
