@@ -93,8 +93,8 @@
 
 /* Статьи и текстовые блоки */
 .article-content {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
 }
 
 .article-content .timeline {
@@ -852,4 +852,16 @@ body.light-theme .ruler-name {
 .article-content h1,
 .page-content h1 {
   font-family: var(--font-digits);
+}
+
+/* Снимаем ограничение ширины для страницы "Личности" */
+.persons-page {
+  max-width: none;
+  margin: 0;
+}
+
+/* При необходимости можно снять ограничения и для других обёрток с сетками */
+.page-content {
+  max-width: none;
+  margin: 0;
 }

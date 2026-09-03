@@ -78,7 +78,7 @@ body {
   flex: 1;
   padding: 2vw 4vw;
   width: 100%;
-  max-width: 1400px;
+  max-width: none;
   margin: 0 auto;
 }
 
