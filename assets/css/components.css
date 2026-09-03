@@ -707,3 +707,10 @@ body.light-theme .interval:hover {
 body.light-theme .ruler-name {
   /* ничего не меняем, наследует от interval */
 }
+
+.carousel {
+  max-width: 100%;   /* было 1000px */
+}
+.changelog {
+  max-width: 100%;   /* было 700px */
+}
