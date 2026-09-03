@@ -26,6 +26,7 @@ const sections = {
   map7:        { title: 'Древнерусское государство при Владимире Святославиче (980–1015)', template: 'pages/maps/map7.html', parent: 'maps' },
   map8:        { title: 'Крещение Руси и распространение христианства (988–1015)', template: 'pages/maps/map8.html', parent: 'maps' },
   map9:        { title: 'Соседи Древней Руси: Византия, Волжская Булгария, Польша, Венгрия, печенеги', template: 'pages/maps/map9.html', parent: 'maps' },
+  map10:       { title: 'Административно-территориальное деление в конце правления Владимира', template: 'pages/maps/map10.html', parent: 'maps' },
 };
 
 async function loadSection(name) {
