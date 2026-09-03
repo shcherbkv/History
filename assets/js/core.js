@@ -78,3 +78,14 @@ function initCarousel() {
 
 // Вызвать после загрузки контента
 document.addEventListener('DOMContentLoaded', initCarousel);
+
+// Закрытие меню при клике вне навигации
+document.addEventListener('click', function(e) {
+  const navList = document.querySelector('.nav-list');
+  const mainNav = document.querySelector('.main-nav');
+
+  // Если меню открыто и клик был вне .main-nav, закрываем
+  if (navList.classList.contains('open') && !mainNav.contains(e.target)) {
+    navList.classList.remove('open');
+  }
+});
