@@ -36,6 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Кнопка "Назад"
+document.getElementById('back-button')?.addEventListener('click', () => {
+  if (window.history.length > 1) {
+    window.history.back();
+  } else {
+    window.location.hash = '#home';
+  }
+});
+
 // Простая карусель
 function initCarousel() {
   const carousel = document.querySelector('.carousel');
