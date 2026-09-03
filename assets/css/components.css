@@ -431,8 +431,9 @@
   margin-bottom: 0.8em;
   letter-spacing: 0.5px;
   font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
+  clear: both; 
 }
 
 .page-content p {
@@ -445,6 +446,40 @@
 .page-content .text-block {
   font-size: 1.2vw;
   line-height: 1.7;
+}
+
+.page-content h3,
+.article-content h3 {
+  font-size: 2rem;               /* было 1.5rem */
+  clear: both;                   /* заголовок начинается с новой строки после float */
+}
+
+.float-left,
+.float-right {
+  max-width: 45%;      /* не даём разрастись больше 45% ширины контейнера */
+  width: auto;         /* ширина подстраивается под контент, но не превышает max-width */
+  margin: 0 0 1.5vw 0;
+}
+
+.float-left {
+  float: left;
+  margin-right: 2vw;
+}
+
+.float-right {
+  float: right;
+  margin-left: 2vw;
+}
+
+/* Подпись внутри плавающего изображения не должна быть шире самого изображения */
+.float-left figcaption,
+.float-right figcaption {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.text-block {
+  clear: both;
 }
 
 /* Остальные компоненты (картинки, цитаты, списки) уже описаны в components.css и будут работать, так как используют свои классы */
@@ -667,6 +702,10 @@
   }
   .timeline {
     min-width: 600px;
+  }
+  .page-content h3,
+  .article-content h3 {
+    font-size: 1.5rem;
   }
 }
 
