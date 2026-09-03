@@ -397,6 +397,24 @@
   transform: scale(1.08);
 }
 
+/* Страницы, занимающие всю ширину */
+.page-content,
+.history-page {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Уберите ограничение у #content, если оно мешает */
+#content {
+  flex: 1;
+  padding: 2vw 4vw;
+  width: 100%;
+  max-width: none;      /* ← раньше было 1400px */
+  margin: 0;
+}
+
 /* Лайтбокс (модальное окно для изображений) */
 .lightbox {
   position: fixed;
