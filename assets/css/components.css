@@ -902,3 +902,13 @@ body.light-theme .ruler-name {
     margin-right: auto;
   }
 }
+
+@media (max-width: 600px) {
+  .theme-toggle {
+    font-size: 28px;      /* размер шрифта определяет величину эмодзи-иконки */
+  }
+  /* Если внутри есть отдельный .theme-icon, можно уточнить */
+  .theme-toggle .theme-icon {
+    font-size: 28px;
+  }
+}
