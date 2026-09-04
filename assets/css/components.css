@@ -952,3 +952,25 @@ body.light-theme .ruler-name {
     font-size: 4.5vw;
   }
 }
+
+@media (max-width: 600px) {
+  /* Обычные абзацы в статьях */
+  .article-content p {
+    font-size: 10vw;              /* было 4vw, стало 10vw (в 2,5 раза) */
+  }
+
+  /* Подписи к изображениям */
+  .article-content .article-image figcaption {
+    font-size: 8.8vw;             /* было 3.5vw, стало 8.8vw */
+  }
+
+  /* Цитаты */
+  .article-content .custom-quote {
+    font-size: 10vw;              /* было 4vw, стало 10vw */
+  }
+
+  /* Подписи внутри цитат (источники) */
+  .article-content .custom-quote cite {
+    font-size: 8.8vw;             /* было 3.5vw, стало 8.8vw */
+  }
+}
