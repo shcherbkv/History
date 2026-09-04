@@ -912,3 +912,43 @@ body.light-theme .ruler-name {
     font-size: 28px;
   }
 }
+
+/* Вертикальный таймлайн для мобильных */
+.timeline-vertical {
+  display: none;               /* по умолчанию скрыт на десктопе */
+}
+
+@media (max-width: 600px) {
+  /* Скрываем горизонтальный таймлайн */
+  .timeline {
+    display: none;
+  }
+
+  /* Показываем вертикальный список */
+  .timeline-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    margin-top: 2vh;
+  }
+
+  .timeline-vertical-item {
+    display: flex;
+    align-items: baseline;
+    gap: 4vw;
+    padding: 1.5vh 0;
+    border-bottom: 1px solid var(--border-color);
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  .timeline-vertical-item .years {
+    min-width: 30%;
+    font-weight: bold;
+    color: var(--heading-color);
+  }
+
+  .timeline-vertical-item .name {
+    font-size: 4.5vw;
+  }
+}
