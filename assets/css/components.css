@@ -933,3 +933,9 @@ body.light-theme .page-content .card-title {
     font-size: inherit;    /* наследует от родителя, если задаёте отдельно */
   }
 }
+
+@media (max-width: 600px) {
+  .changelog h2 {
+    font-size: 12vw;   /* было 6vw, теперь в 2 раза больше */
+  }
+}
