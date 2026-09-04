@@ -865,3 +865,30 @@ body.light-theme .ruler-name {
   max-width: none;
   margin: 0;
 }
+
+@media (max-width: 600px) {
+  .changelog h2 {
+    font-size: 6vw;            /* заголовок "Последние изменения" */
+  }
+
+  .changelog-list li {
+    font-size: 4vw;            /* общий размер текста в строках */
+    grid-template-columns: 1fr; /* на узком экране лучше одна колонка */
+    gap: 0.8vh;
+  }
+
+  .changelog-list .version {
+    font-size: 5vw;            /* версия крупнее */
+    font-weight: bold;
+  }
+
+  .changelog-list .date {
+    font-size: 4vw;            /* дата */
+  }
+
+  .changelog-list .desc {
+    font-size: 4vw;            /* описание */
+    text-align: left;
+    font-style: normal;
+  }
+}
