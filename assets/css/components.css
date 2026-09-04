@@ -974,3 +974,10 @@ body.light-theme .ruler-name {
     font-size: 8.8vw;             /* было 3.5vw, стало 8.8vw */
   }
 }
+
+@media (max-width: 600px) {
+  .card-grid {
+    row-gap: 5vh;        /* вертикальный отступ между строками */
+    column-gap: 4vw;     /* горизонтальный, если карточки в несколько колонок */
+  }
+}
