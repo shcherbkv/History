@@ -923,3 +923,13 @@ body.light-theme .page-content .card-title {
   padding-left: 10%;
   padding-right: 10%;
 }
+
+@media (max-width: 600px) {
+  .theme-toggle {
+    font-size: 36px;       /* размер, равный высоте SVG-иконки кнопки назад */
+    line-height: 1;        /* чтобы эмодзи не растягивался */
+  }
+  .theme-toggle .theme-icon {
+    font-size: inherit;    /* наследует от родителя, если задаёте отдельно */
+  }
+}
