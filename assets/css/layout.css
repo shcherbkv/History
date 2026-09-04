@@ -276,3 +276,32 @@ body {
   color: var(--link-hover);
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  /* Логотип и гамбургер группируем слева */
+  .site-header {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .logo {
+    margin-right: 4vw;          /* небольшой отступ между логотипом и кнопкой */
+  }
+
+  .main-nav {
+    order: 2;                   /* размещаем блок с гамбургером после логотипа */
+    flex: 0 0 auto;             /* не даём ему растягиваться */
+    margin-left: 0;             /* убираем возможный отступ */
+  }
+
+  .menu-toggle {
+    display: block;             /* гамбургер виден */
+    margin: 0;                  /* убираем лишние поля, если были */
+  }
+
+  /* Кнопки назад и темы справа */
+  .header-controls {
+    order: 3;
+    margin-left: auto;          /* прижимаем к правому краю */
+  }
+}
