@@ -21,6 +21,7 @@
   --footer-text: #bdbdbd;
   --link-hover: #c7be00;
   --transition-speed: 0.3s;
+  --h1-color: #e0e0e0;   /* светло-серый для тёмной темы */
 }
 
 body.light-theme {
@@ -41,8 +42,12 @@ body.light-theme {
   --footer-bg: #e0e0e0;
   --footer-text: #333;
   --link-hover: #8a6d1f;
+  --h1-color: #333333;   /* тёмно-серый для светлой темы */
 }
 
 :root {
   --font-digits: 'Segoe UI', 'Arial', 'Helvetica', sans-serif;
 }
+
+--h1-color: #e0e0e0;   /* светло-серый для тёмной темы */
+

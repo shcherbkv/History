@@ -76,10 +76,10 @@ body {
 /* Основной контент */
 #content {
   flex: 1;
-  padding: 2vw 4vw;
+  padding: 2vw 0;      /* убраны боковые отступы */
   width: 100%;
   max-width: none;
-  margin: 0 auto;
+  margin: 0;
 }
 
 /* Подвал */
