@@ -1003,3 +1003,12 @@ body.light-theme .ruler-name {
     margin-bottom: 4vh;
   }
 }
+
+.page-content h1 {
+  text-align: center;
+  color: var(--heading-color);
+  font-size: 3vw;
+  margin-bottom: 4vh;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
