@@ -981,3 +981,25 @@ body.light-theme .ruler-name {
     column-gap: 4vw;     /* горизонтальный, если карточки в несколько колонок */
   }
 }
+
+/* Заголовки и разделы на странице архитектуры */
+.architecture-group {
+  margin-bottom: 6vh;
+}
+
+.architecture-group h2 {
+  font-size: 2.5vw;
+  color: var(--heading-color);
+  border-bottom: 2px solid var(--heading-color);
+  padding-bottom: 0.5em;
+  margin-bottom: 2vh;
+}
+
+@media (max-width: 600px) {
+  .architecture-group h2 {
+    font-size: 6vw;
+  }
+  .architecture-group {
+    margin-bottom: 4vh;
+  }
+}
