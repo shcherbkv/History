@@ -1012,3 +1012,18 @@ body.light-theme .ruler-name {
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
+
+/* Единый стиль для главных заголовков всех страниц */
+#content h1 {
+  text-align: center;
+  color: var(--heading-color);
+  font-size: 3vw;
+  margin-bottom: 4vh;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+@media (max-width: 600px) {
+  #content h1 {
+    font-size: 6vw;      /* или 7vw, как у других */
+  }
+}
