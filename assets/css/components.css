@@ -251,7 +251,7 @@
   position: relative;
   width: 100%;
   min-width: 800px;
-  height: 150px;               /* чуть уменьшил, можно оставить 180px */
+  height: 220px;               /* чуть уменьшил, можно оставить 180px */
   margin: 0 auto;
 }
 
@@ -307,7 +307,7 @@
   top: 65px;                   /* блоки с именами правителей ниже дат */
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 100%;
 }
 
 .interval {
@@ -316,7 +316,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 80px;
   background-color: rgba(255,255,255,0.03);
   border: 1px solid transparent;
   border-radius: 0.5vw;
