@@ -939,3 +939,103 @@ body.light-theme .page-content .card-title {
     font-size: 12vw;   /* было 6vw, теперь в 2 раза больше */
   }
 }
+
+/* =============================================
+   ВЕРТИКАЛЬНЫЙ ТАЙМЛАЙН ДЛЯ МОБИЛЬНЫХ
+   ============================================= */
+.timeline-vertical {
+  display: none;                /* скрыт на десктопе */
+  position: relative;
+  margin-top: 2vh;
+  padding-left: 30px;           /* место под линию и точки */
+}
+
+.timeline-vertical::before {
+  content: '';
+  position: absolute;
+  left: 10px;                   /* линия по центру точки */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.timeline-vertical-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: transform 0.2s, background-color 0.3s, border-color 0.3s;
+  animation: slideIn 0.4s ease forwards;
+  opacity: 0;                   /* для анимации появления */
+}
+
+.timeline-vertical-item::before {
+  content: '';
+  position: absolute;
+  left: -25px;                  /* точка на линии */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: var(--heading-color);
+  border-radius: 50%;
+  border: 2px solid var(--bg-main);
+  box-shadow: 0 0 0 2px var(--heading-color);
+}
+
+.timeline-vertical-item:hover {
+  transform: translateX(5px);
+  background-color: var(--card-hover-bg);
+  border-color: var(--card-hover-border);
+}
+
+.timeline-vertical-item .years {
+  font-weight: bold;
+  color: var(--heading-color);
+  white-space: nowrap;
+  min-width: 70px;
+}
+
+.timeline-vertical-item .name {
+  font-size: 1rem;
+  flex: 1;
+}
+
+/* Анимация появления */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Небольшая задержка для каждого элемента */
+.timeline-vertical-item:nth-child(1) { animation-delay: 0.05s; }
+.timeline-vertical-item:nth-child(2) { animation-delay: 0.1s; }
+.timeline-vertical-item:nth-child(3) { animation-delay: 0.15s; }
+.timeline-vertical-item:nth-child(4) { animation-delay: 0.2s; }
+.timeline-vertical-item:nth-child(5) { animation-delay: 0.25s; }
+.timeline-vertical-item:nth-child(6) { animation-delay: 0.3s; }
+.timeline-vertical-item:nth-child(7) { animation-delay: 0.35s; }
+
+/* Показываем вертикальный таймлайн на мобильных */
+@media (max-width: 600px) {
+  .timeline {
+    display: none;
+  }
+  .timeline-vertical {
+    display: block;   /* или flex, но block проще для ::before */
+  }
+}
