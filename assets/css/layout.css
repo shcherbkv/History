@@ -314,4 +314,9 @@ body {
   text-decoration: none;
   border-radius: 0.5vw;    /* если хотите скругление */
   }
+
+  .nav-list li {
+  margin: 0;
+  padding: 0;
+}
 }
