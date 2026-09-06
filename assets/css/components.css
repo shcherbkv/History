@@ -1080,5 +1080,51 @@ body.light-theme .page-content .card-title {
   .timeline-vertical {
     display: block;   /* или flex, но block проще для ::before */
   }
+  .architecture-page .card-title,
+  .page-content .card-title {
+    font-size: 4vw;      /* было 5vw, теперь заметно крупнее */
+    line-height: 1.3;
+  }
 }
 
+/* ============ ВЕРТИКАЛЬНЫЙ ТАЙМЛАЙН (ПОСЕЩЕНИЯ) ============ */
+.timeline-vertical-item {
+  /* Базовые цвета — серебристые */
+  color: #aaaaaa;
+  border-left: 2px solid #aaaaaa;   /* если вы не используете ::before для линии, можно оставить только эту строку */
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.timeline-vertical-item .years {
+  color: #aaaaaa;                    /* даты серебристые */
+  font-weight: bold;
+}
+
+.timeline-vertical-item::before {
+  background: #aaaaaa;               /* точка серебристая */
+  border: 2px solid var(--bg-main);
+  transition: background 0.3s;
+}
+
+/* Посещённый элемент — жёлтый */
+.timeline-vertical-item.visited {
+  color: var(--heading-color);
+}
+
+.timeline-vertical-item.visited .years {
+  color: var(--heading-color);
+}
+
+.timeline-vertical-item.visited::before {
+  background: var(--heading-color);
+}
+
+.timeline-vertical-item::before {
+  background: #aaaaaa;
+  box-shadow: 0 0 0 2px var(--bg-main);
+}
+
+.timeline-vertical-item.visited::before {
+  background: var(--heading-color);
+  box-shadow: 0 0 0 2px var(--heading-color);
+}

@@ -304,4 +304,14 @@ body {
     order: 3;
     margin-left: auto;          /* прижимаем к правому краю */
   }
+
+  .nav-list a {
+    display: block;          /* делаем ссылку блочным элементом */
+  width: 100%;             /* занимает всю ширину строки */
+  padding: 2vw;            /* отступы сохраняем */
+  font-size: 4vw;
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 0.5vw;    /* если хотите скругление */
+  }
 }

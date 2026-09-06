@@ -116,6 +116,9 @@ async function loadSection(name) {
   const html = await response.text();
   document.getElementById('content').innerHTML = html;
 
+    markAsVisited(name);
+  updateVisitedMarks();
+
   initGallery?.();
   initLightbox?.();
   initTimeline?.();
@@ -161,3 +164,27 @@ document.getElementById('back-button')?.addEventListener('click', () => {
   const parentHash = currentSection?.parent || 'home';
   loadSection(parentHash);
 });
+
+function markAsVisited(sectionName) {
+  // Не сохраняем служебные разделы
+  if (sectionName === 'home' || sectionName === 'history') return;
+
+  let visited = JSON.parse(localStorage.getItem('visitedSections')) || [];
+  if (!visited.includes(sectionName)) {
+    visited.push(sectionName);
+    localStorage.setItem('visitedSections', JSON.stringify(visited));
+  }
+}
+
+function updateVisitedMarks() {
+  const visited = JSON.parse(localStorage.getItem('visitedSections')) || [];
+
+  document.querySelectorAll('.timeline-vertical-item').forEach(item => {
+    const section = item.dataset.section;
+    if (visited.includes(section)) {
+      item.classList.add('visited');
+    } else {
+      item.classList.remove('visited');
+    }
+  });
+}
