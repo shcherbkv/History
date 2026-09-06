@@ -694,6 +694,31 @@
   .architecture-page .card-text {
     font-size: 4vw;
   }
+  .article-content p,
+.page-content p {
+  font-size: 5vw;          /* примерно 18–19px на 375px */
+  line-height: 1.5;
+}
+.article-content .article-image figcaption {
+  font-size: 4vw;          /* около 15px */
+}
+.article-content .custom-quote {
+  font-size: 5vw;
+  line-height: 1.5;
+}
+.article-content .custom-quote cite {
+  font-size: 4vw;
+}
+.article-content .custom-quote {
+  font-size: 6vw;          /* было 5vw, стало чуть больше */
+  line-height: 1.5;
+}
+.article-content .custom-quote cite {
+  font-size: 5vw;          /* было 4vw */
+}
+.article-content .article-image figcaption {
+  font-size: 5vw;          /* было 4vw */
+}
 }
 
 /* ============ СВЕТЛАЯ ТЕМА ДЛЯ КОМПОНЕНТОВ ============ */
@@ -817,6 +842,10 @@ body.light-theme .architecture-page .card-text {
   .culture-card .card-content h2 { font-size: 5vw; }
   .culture-card .card-content p { font-size: 4vw; }
   .culture-card .card-image { height: 220px; }
+  .theme-toggle {
+  font-size: 30px;
+  line-height: 1;
+  }
 }
 
 /* Убираем лишний отступ слева и выравниваем текст в карточках "Культура" */
@@ -834,7 +863,7 @@ body.light-theme .architecture-page .card-text {
   margin-top: 2em;
   margin-bottom: 0.8em;
   letter-spacing: 0.5px;
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -884,6 +913,18 @@ body.light-theme .page-content .card-title {
     margin-top: 2vh;
   }
 
+  .article-image figcaption {
+    font-size: 3.5vw;
+  }
+
+  .custom-quote {
+    font-size: 3.5vw;
+  }
+
+  .custom-quote cite {
+    font-size: 3vw;
+  }
+
   .timeline {
     display: none;   /* скрываем горизонтальный на мобильных */
   }
@@ -925,6 +966,7 @@ body.light-theme .page-content .card-title {
 }
 
 @media (max-width: 600px) {
+<<<<<<< HEAD
   .theme-toggle {
     font-size: 36px;       /* размер, равный высоте SVG-иконки кнопки назад */
     line-height: 1;        /* чтобы эмодзи не растягивался */
@@ -1039,3 +1081,4 @@ body.light-theme .page-content .card-title {
     display: block;   /* или flex, но block проще для ::before */
   }
 }
+
