@@ -470,7 +470,7 @@
 .carousel-slide img {
   width: 100%;
   height: 400px;  /* уменьшено с 540 до 400 */
-  object-fit: cover;
+  object-fit: fill;
   display: block;
 }
 .carousel-slide figcaption {
@@ -1127,4 +1127,12 @@ body.light-theme .page-content .card-title {
 .timeline-vertical-item.visited::before {
   background: var(--heading-color);
   box-shadow: 0 0 0 2px var(--heading-color);
+}
+
+@media (min-width: 601px) {
+  .carousel {
+    width: 80%;          /* остальные 20% распределятся поровну по бокам (по 10%) */
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
